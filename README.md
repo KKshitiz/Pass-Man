@@ -8,17 +8,27 @@
     * Password manager
     * Password generator
 
-    What it does?
-    * Authenticates user login
-    * Shows a panel of user passwords
-    * User can add title, login, passwords, their corresponding websites and any other detail
-    * User can edit entries
-    * User can delete entries
-    * Stores passwords in a database file in hashed format using SHA256 encryption technique
-    * Passwords can be easily copied to clipboard
-    * User can generate strong random passwords with the option to include digits, capitals and/or special characters
-    * Ability to recover forgotten master password
-    
+    # Features:
+    ## User login:
+    * User can enter their username and master-password to open the vault
+    * Supports multiple users
+    * If the account doesn't exist, user can create a new account
+    * All the passwords are stored in hashed format using SHA256 encryption technique
+    * The entered username and master-password will be checked against the details stored in the sqlite database
+    * Forget password option to create new master-password
+
+    ## Password manager
+    * A table consiting of stored passwords
+    * Add multiple entries consisting of title, login-id, password, website and any other extra detail
+    * User can update or delete existing entries
+    * Passwords can be easily copied to clipboard with a click
+
+    ## Password generator
+      User can generate strong random passwords with following options:
+      * Set the length
+      * Enable/disable Uppercase characters
+      * Enable/disable digits
+      * Enable/disable special characters
         
     ## Technologies used:
         * python3

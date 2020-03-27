@@ -12,7 +12,7 @@ def exitSignup():
 def startSignup():
     global root
     root=Toplevel()
-    # root.attributes('-topmost',True)
+    root.attributes('-topmost',True)
     root.title("  Signup")
     root.geometry("330x620")
     # root.resizable(0,0)

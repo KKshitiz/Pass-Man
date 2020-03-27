@@ -1,6 +1,6 @@
 #the imports are so used as to reduce the executable file size
-from tkinter import Frame,Label,Button,TOP,LEFT,PhotoImage,Tk
-from tkinter.ttk import Entry,Style
+from tkinter import Frame,Label,Button,TOP,LEFT,PhotoImage,Tk,HORIZONTAL,X
+from tkinter.ttk import Entry,Style,Separator
 from PIL import ImageTk,Image
 from passlib.hash import sha256_crypt
 from signup import startSignup
@@ -40,8 +40,10 @@ def startLogin():
         img=ImageTk.PhotoImage(Image.open(assetpath+"padlock.png").resize((40,40)))
         Label(topf,image=img,bg="white").grid(row=0,column=2,rowspan=2,padx=8)
 
+        # Separator(root,orient=HORIZONTAL).pack()
         # divider=ImageTk.PhotoImage(Image.open(assetpath+"divider.png").resize((300,20)))
         # Label(root,image=divider,bg="green").pack()
+        
 
         detailf=Frame(root,bg="white")
         detailf.pack(pady=25,side=TOP)
