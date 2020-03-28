@@ -22,13 +22,16 @@
     * Add multiple entries consisting of title, login-id, password, website and any other extra detail
     * User can update or delete existing entries
     * Passwords can be easily copied to clipboard with a click
+    * Important entries can be starred
+    * Bulk deletion option
+    * Opening URL directly from the entry
 
     ## Password generator
       User can generate strong random passwords with following options:
-      * Set the length
-      * Enable/disable Uppercase characters
-      * Enable/disable digits
-      * Enable/disable special characters
+    * Set the length
+    * Enable/disable Uppercase characters
+    * Enable/disable digits
+    * Enable/disable special characters
         
     ## Technologies used:
         * python3

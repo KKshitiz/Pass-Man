@@ -1,7 +1,7 @@
 """
 function to generate random strong passwords
 """
-from tkinter import *
+from tkinter import Frame,Toplevel,PhotoImage,Label,LEFT,Button,BooleanVar,END,W,X
 from tkinter.ttk import Style,Entry,Radiobutton,Checkbutton,Spinbox
 from random import randint
 from subprocess import check_call
@@ -88,12 +88,13 @@ def startPassGen():
     copyb.pack(side=LEFT,padx=2)
 
     global length
-    length=4
+    length=8
 
     lenf=Frame(mainf)
     lenf.pack()
     Label(lenf,text="Length  ",bg="white").pack(side=LEFT)
     s=Spinbox(lenf,from_=4,to=25,width=5,command=lambda : setlength(s.get()))
+    s.set(8)
     s.pack(side=LEFT)
 
     upper=BooleanVar()
@@ -112,7 +113,9 @@ def startPassGen():
     specialb.pack(anchor=W,pady=5)
 
     genb=Button(mainf,text="Generate",command=lambda : passGen(length,upper.get(),digit.get(),special.get()),bg="turquoise3",activebackground="turquoise3",bd=0)
-    genb.pack(pady=10,ipadx=20)
+    genb.pack(pady=10,ipadx=20,padx=(43,10),side=LEFT)
+    exitb=Button(mainf,text="Exit",command=exitPassGen,bg="firebrick1",activebackground="firebrick1",bd=0,width=37)
+    exitb.pack(pady=10,ipadx=20,padx=(10,30),side=LEFT)
 
     root.mainloop()
 
